@@ -106,8 +106,25 @@ export function setLocalStateFocus(
   localState.focusing = focusing;
   awareness.setLocalState(localState);
 }
+export {$createCollabDecoratorNode} from './CollabDecoratorNode';
+export {$createCollabElementNode} from './CollabElementNode';
+export {$createCollabLineBreakNode} from './CollabLineBreakNode';
+export {$createCollabTextNode} from './CollabTextNode';
 export {syncCursorPositions} from './SyncCursors';
 export {
   syncLexicalUpdateToYjs,
   syncYjsChangesToLexical,
 } from './SyncEditorStates';
+export {
+  $createCollabNodeFromLexicalNode,
+  $getNodeByKeyOrThrow,
+  createLexicalNodeFromCollabNode,
+  doesSelectionNeedRecovering,
+  getIndexOfYjsNode,
+  getOrInitCollabNodeFromSharedType,
+  getPositionFromElementAndOffset,
+  spliceString,
+  syncPropertiesFromLexical,
+  syncPropertiesFromYjs,
+  syncWithTransaction,
+} from './Utils';
